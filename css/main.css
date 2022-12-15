@@ -21,11 +21,12 @@ body {
 .title, p {
     font-family: sans-serif ;
     font-size: larger;
+    text-align: center;
 }
 
 img{
-    width: 240px; /* width and height make sure the photo displays at the size I choose*/
-    height: 150px;
+    width: 340px; /* width and height make sure the photo displays at the size I choose*/
+    height: 240px;
     border: 2px solid rgb(0, 0, 0); /* adds a black border to the pictures */
   }
 
@@ -37,18 +38,40 @@ img:active{
 }
 @keyframes zoom{
     0%{
-        transform: scale(3, 3);
+        transform: scale(2, 2);
         }
     100%{
-        transform: scale(3, 3);
+        transform: scale(2, 2);
         }
 }
 
-@media screen and (max-width: 900px) { /* all content in this section is only applied to smaller screen sizes */
+@media screen and (max-width: 950px) { /* all content in this section is only applied to smaller screen sizes */
     .title, p {
         font-family: sans-serif ;
         font-size: large;
     }
+    img{
+        width: auto; /* width and height make sure the photo displays at the size I choose*/
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+      img:active{
+        animation-duration: 2s; /* determins the length of the phasing in and out animation */
+           animation-name: zoom; /* the name of the animation */
+           animation-iteration-count: infinite;
+           
+       }
+       @keyframes zoom{
+           0%{
+               transform: scale(2, 2);
+               }
+           100%{
+               transform: scale(2, 2);
+               }
+       }
 }
   
 @media screen and (min-width: 1300px) { /* all content in this section is only applied to larger screen sizes */
@@ -56,4 +79,8 @@ img:active{
         font-family: sans-serif ;
         font-size: x-large;
     }
+    img{
+        width: 440px; /* width and height make sure the photo displays at the size I choose*/
+        height: 300px;
+      }
 }
