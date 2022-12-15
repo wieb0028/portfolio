@@ -13,11 +13,14 @@
             <li itemprop="mainEntity"><a href="#main" class="skip">Skip to Main Information</a></li> <!-- creates a button that skips to main info/photos -->
             <li itemprop="text"><a href="#footer" class="skip">Skip to Footer</a></li> <!-- creates a button that skips to the footer of the website -->
         </ul>
-        <h1>Picture Portfolio</h1>
+        <div class="title">
+            <h1>Picture Portfolio</h1>
+        </div>
     </header>
-    <div class="mid">
-        <p>This websites purpose is to demonstrate the photography work I've done in this program</p>
+    <div class="mid" id="main" role="contentinfo">
+            <p>This websites purpose is to demonstrate the photography work I've done in this program</p>
         <div class="pictures">
+            <div class="row justify-content-center">
             <img src="images/1.JPG" alt="photo of a dog in the snow"> <!-- adds my images to the website -->
             <img src="images/2.JPG" alt="photo of a colorfull glass pattern"> 
             <img src="images/3.JPG" alt="photo of a man looking into the distance"> 
@@ -26,8 +29,11 @@
             <img src="images/6.JPG" alt="photo of a man in front of a brick wall"> 
             <img src="images/7.JPG" alt="close up photo of a dog"> 
             <img src="images/8.JPG" alt="photo of a shed in a snowey setting"> 
-
         </div>
     </div>
+    </div>
+    <footer id="footer" role="contentinfo">
+        <p>Copyright Portfolio - Cameron Wiebe 2022</p>
+    </footer>
 </body>
 </html>

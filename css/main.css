@@ -1,0 +1,59 @@
+.skiplinks{
+  list-style: none; /* removes any defult layout for the list of skiplinks */
+  }
+
+.skiplinks a{
+  position: absolute; /* keeps the skiplinks in the same spot even when scrolling */
+  top: -4em; /* Keeps the skiplinks hidden above all content in page*/
+  padding: .5em 1em;
+  font-weight: bold; /* Makes the font bold and easy to read */
+  background-color: rgb(0, 0, 0);
+  color:rgb(255, 255, 255);
+  }
+
+.skiplinks a:focus{ /* makes it so that when the tab button is hit the skip links appear at the top of the page*/
+  top: 0;
+  }
+
+body {
+    background-color: rgba(250, 128, 114, 0.356);}
+
+.title, p {
+    font-family: sans-serif ;
+    font-size: larger;
+}
+
+img{
+    width: 240px; /* width and height make sure the photo displays at the size I choose*/
+    height: 150px;
+    border: 2px solid rgb(0, 0, 0); /* adds a black border to the pictures */
+  }
+
+img:active{
+ animation-duration: 2s; /* determins the length of the phasing in and out animation */
+    animation-name: zoom; /* the name of the animation */
+    animation-iteration-count: infinite;
+    
+}
+@keyframes zoom{
+    0%{
+        transform: scale(3, 3);
+        }
+    100%{
+        transform: scale(3, 3);
+        }
+}
+
+@media screen and (max-width: 900px) { /* all content in this section is only applied to smaller screen sizes */
+    .title, p {
+        font-family: sans-serif ;
+        font-size: large;
+    }
+}
+  
+@media screen and (min-width: 1300px) { /* all content in this section is only applied to larger screen sizes */
+    .title, p {
+        font-family: sans-serif ;
+        font-size: x-large;
+    }
+}
