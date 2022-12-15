@@ -18,10 +18,12 @@
 body {
     background-color: rgba(250, 128, 114, 0.356);}
 
-.title, p {
-    font-family: sans-serif ;
-    font-size: larger;
+.title, p { /* this section displayed all text in the center of the site */
     text-align: center;
+}
+p { /* this section changes all paragraph text size */
+    font-family: sans-serif ;
+    font-size: x-large;
 }
 
 img{
@@ -36,7 +38,7 @@ img:active{
     animation-iteration-count: infinite;
     
 }
-@keyframes zoom{
+@keyframes zoom{ /* the keyframes section determins how my animation will work, in this case enlarging the photo when the user presses on it */
     0%{
         transform: scale(2, 2);
         }
@@ -46,38 +48,29 @@ img:active{
 }
 
 @media screen and (max-width: 950px) { /* all content in this section is only applied to smaller screen sizes */
-    .title, p {
-        font-family: sans-serif ;
-        font-size: large;
+    p {
+        font-size: large;/* changes text size for smaller screens*/
     }
-    img{
-        width: auto; /* width and height make sure the photo displays at the size I choose*/
+    img{ /* centers all images when they are viewed in smaller screens */
         height: auto;
         display: block;
         margin-left: auto;
         margin-right: auto;
         width: 50%;
       }
-      img:active{
-        animation-duration: 2s; /* determins the length of the phasing in and out animation */
-           animation-name: zoom; /* the name of the animation */
-           animation-iteration-count: infinite;
-           
-       }
-       @keyframes zoom{
-           0%{
-               transform: scale(2, 2);
-               }
-           100%{
-               transform: scale(2, 2);
-               }
-       }
+    @keyframes zoom{ /* changes the animation to be easier to view on a smaller screen */
+        0%{
+            transform: scale(2, 2);
+            }
+        100%{
+            transform: scale(2, 2);
+            }
+    }
 }
   
 @media screen and (min-width: 1300px) { /* all content in this section is only applied to larger screen sizes */
-    .title, p {
-        font-family: sans-serif ;
-        font-size: x-large;
+    p {
+        font-size: x-large; /* changes text size for larger screens*/
     }
     img{
         width: 440px; /* width and height make sure the photo displays at the size I choose*/
